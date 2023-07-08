@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title> Result Link APP </title>
+	<style>
+		* {font-size:50px;}
+		body { background-color:lightyellow;}
+		.nav {background-color:black}
+		.nav a {color:white; margin:5%; text-decoration:none}
+	</style>
+	<script>
+		function find(){
+			event.preventDefault()
+			let num = document.getElementById("num")
+			if (num.value == ""){
+				num.focus()
+				alert("empty input")
+				return
+			}
+			let n = parseInt(num.value)
+			let r = n *n
+			localStorage.setItem("r",r)
+			window.location.href = "result.html"
+		}
+	</script>
+</head>
+<body>
+<center>
+	<script>
+		localStorage.clear()
+	</script>
+	<div class = "nav">
+		<a href = "index.html">Home</a>
+		<a href = "about.html">About</a>
+	</div>
+	<h1> Sqrt App </h1>
+	<form onsubmit="find()">
+		<input type = "number" step = "any" placeholder= "enter number" id="num"/>
+		<br><br>
+		<input type = "submit" value = "Find Sqrt"/>
+	</form>
+</center>
+</body>
+</html>

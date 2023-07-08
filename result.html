@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title> Result Link APP </title>
+	<style>
+		* {font-size:50px;}
+		body { background-color:lightyellow;}
+		.nav {background-color:black}
+		.nav a {color:white; margin:5%; text-decoration:none}
+	</style>
+	<script>
+	
+	</script>
+</head>
+<body>
+<center>
+	<div class = "nav">
+		<a href = "index.html">Home</a>
+		<a href = "about.html">About</a>
+	</div>
+	<h1> Result Page </h1>
+	<h2 id = "ans"></h2>
+	<script>
+		let ans = document.getElementById("ans")
+		let r = localStorage.getItem("r")
+		if ( r == null)		window.location.href = "index.html";
+		else			ans.innerHTML = r
+		
+	</script>
+</center>
+</body>
+</html>
